@@ -6,6 +6,15 @@
             - Add a property named `size` and set it to a number value between `0` and `20`.
             - Add a property named `contents` and set it to be an empty array.
  */
+ var plainBox = {
+    color: "yellow",
+    size: 10,
+    contents: []
+ };
+
+console.log(plainBox.color);
+console.log(plainBox.size);
+console.log(plainBox.contents);
 
 
 /*
@@ -22,28 +31,57 @@
             - add a key named `driver` and set it to be `null`.
             - add a key named `passengers` and set it to be an empty array.
  */
-
+var stockCar = {
+    model : "Chrysler",
+    year : 2000,
+    automaticTransmission : true,
+    driver : null,
+    passenger : []
+};
 
 /*
     Add new property inside a function
 
         Declare a variable named `plainPerson`. Set its value to be an empty object with no properties.
 
-        Next, declare a function named `buildPerson` and then define three parameters. The first parameter will be named `person` and the second will be `nameString` and the third will be `age`. Within this function you will modify the `person` object by:
+        Next, declare a function named `buildPerson` and then define three parameters. 
+        The first parameter will be named `person` and the second will be `nameString` and the third will be
+         `age`. Within this function you will modify the `person` object by:
             - adding a property called `name` and set its value to be the second parameter.
             - adding a property called `age` and set its value to be the third parameter.
 
         The function will return the first parameter.
 
-        Finally, invoke your new function while passing in the `plainPerson` object and additional agrument values, then store the return value in a variable named `completePerson`. Use `console.log` three times to print the entire object, just the value at `name`, and just the value at `age`.
+        Finally, invoke your new function while passing in the `plainPerson` object and additional agrument 
+        values, then store the return value in a variable named `completePerson`. 
+        Use `console.log` three times to print the entire object, just the value at `name`, 
+        and just the value at `age`.
  */
+
+console.log("# buildPerson");
+
+var plainPerson = {};
+
+function buildPerson(person,nameString,age) {
+    person.name = nameString;
+    person.age = age;
+    return person;
+}
+buildPerson(plainPerson,"Karen Blixen",90);
+
+console.log("plainPerson object: ",plainPerson);
+console.log("plainPerson object - value of name property: ", plainPerson.name);
+console.log("plainPerson object - value of age property: ", plainPerson.age);
 
 
 /*
     # Display values of objects that are inside an array
-        Declare a new variable named `arrayOfObjects` and set it to be [this array of objects](https://gist.github.com/sgnl/958adf99007329d2e4ff).
+        Declare a new variable named `arrayOfObjects` and set it to be 
+        [this array of objects](https://gist.github.com/sgnl/958adf99007329d2e4ff).
 
-        Declare a new function named `printProcessedOrders`and set one parameter called `orders`. Within this function you will return a string that prints the order details to the page in the following format.
+        Declare a new function named `printProcessedOrders`and set one parameter called `orders`. 
+        Within this function you will return a string that prints the order details to the page in the 
+        following format.
 
         Example output:
             =====
